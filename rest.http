@@ -1,0 +1,33 @@
+#========== User API ==========#
+
+
+### GET user API endpoint
+GET http://localhost:8000/api/v1/users
+
+
+### Create user API endpoint
+POST http://localhost:8000/api/v1/users
+Content-Type: application/json
+
+{
+    "name":"John Doe",
+    "email":"jodo@gmail.com",
+    "password":"12345678"
+}
+
+
+### User LOGIN API endpoint
+POST http://localhost:8000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email":"jodo@gmail.com",
+    "password":"12345678"
+}
+
+
+
+
+
+
+#========== Expense API ==========#
