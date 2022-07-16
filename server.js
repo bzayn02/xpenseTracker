@@ -13,9 +13,14 @@ app.use(cors());
 import { dbConnection } from './src/config/db.js';
 dbConnection();
 
+// Middlewares
+import { userAuth } from './src/middleware/authMiddleware.js';
+
 // APIs
 import userRouter from './src/routers/userRouter.js';
+import etRouter from './src/routers/etRouter.js';
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/expensetracker', userAuth, etRouter);
 
 app.get('*', (req, res) => {
     res.status(404).send('<h1>404 NOT FOUND</h1>');

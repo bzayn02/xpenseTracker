@@ -31,3 +31,26 @@ Content-Type: application/json
 
 
 #========== Expense API ==========#
+
+### get expenses
+GET  http://localhost:8000/api/v1/expensetracker
+Authorization: 62ca208d8cbb571e3e487bd9
+
+
+
+### post expenses
+POST  http://localhost:8000/api/v1/expensetracker
+Content-Type: application/json
+Authorization: 62ca208d8cbb571e3e487bd9
+
+{
+    "name":"Food",
+    "amount":100,
+    "date":"2020-01-01"
+
+}
+
+
+### delete expenses
+DELETE   http://localhost:8000/api/v1/expensetracker
+Authorization: 62ca208d8cbb571e3e487bd9

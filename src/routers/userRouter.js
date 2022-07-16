@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
         result?._id
             ? res.json({
                   status: 'success',
-                  message: 'User registered successfully!',
+                  message: 'User registered successfully! You may login now!',
               })
             : res.json({
                   status: 'error',
@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
     } catch (error) {
         let message = error.message;
         if (error.message.includes('E11000 duplicate key error collection')) {
-            message = 'User already exists, please try another one.';
+            message = 'User already exists, please try another one!';
         }
         res.json({
             status: 'error',
